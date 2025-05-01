@@ -9,14 +9,18 @@ const logFile = path.join(__dirname, 'cron-log.txt');
 const cookiesPath = path.join(__dirname, 'cookies.json');
 
 async function logMessage(message) {
-  console.log(message);
-  try {
-    await axios.post('https://YOUR-DASHBOARD-URL.onrender.com/log', { message });
-  } catch (err) {
-    console.log('❌ Failed to send log to dashboard:', err.message);
+    console.log(message);
+  
+    const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+    fs.appendFileSync(logFile, `[${timestamp}] ${message}\n`);
+  
+    try {
+      await axios.post('https://website-watcher-8xk3.onrender.com/log', { message });
+    } catch (err) {
+      console.error('❌ Failed to send log to dashboard:', err.message);
+    }
   }
-}
-
+  
 async function checkPage() {
   const browser = await puppeteer.launch({
     headless: true,
