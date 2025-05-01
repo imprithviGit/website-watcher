@@ -50,12 +50,13 @@ async function checkPage() {
     }
 
     const pageContent = await page.content();
-    logMessage("FINAL URL:", page.url());
+    const currentUrl = page.url();
+    logMessage(`FINAL URL: ${currentUrl}`);
     if (!pageContent.includes(EXPECTED_TEXT)) {
-      logMessage('❌ Text missing — sending email');
+      logMessage('✅ Text missing — sending email');
       await sendAlertEmail('🚨 Appointment alert! Check now!');
     } else {
-      logMessage('✅ Appointment unavailable (text found)');
+      logMessage('❌ Appointment unavailable (text found)');
     }
 
   } catch (error) {
