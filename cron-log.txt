@@ -123,3 +123,8 @@
 [1/5/2025, 3:25:11 pm] FINAL URL: https://termine.staedteregion-aachen.de/auslaenderamt/suggest
 [1/5/2025, 3:25:11 pm] ❌ Appointment unavailable (text found)
 [1/5/2025, 3:25:11 pm] 🔒 Browser closed
+[1/5/2025, 3:30:04 pm] 🔄 Navigating to page...
+[1/5/2025, 3:30:21 pm] ✅ OK Button clicked
+[1/5/2025, 3:30:26 pm] FINAL URL: https://termine.staedteregion-aachen.de/auslaenderamt/suggest
+[1/5/2025, 3:30:26 pm] ❌ Appointment unavailable (text found)
+[1/5/2025, 3:30:26 pm] 🔒 Browser closed
