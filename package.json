@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Scrapes a website, sends alerts, and serves a log dashboard.",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "watch": "node checkPage.js"
-  },
+"scripts": {
+  "start": "node server.js",
+  "watch": "node runCron.js"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",

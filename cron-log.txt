@@ -95,3 +95,31 @@
 [1/5/2025, 2:30:19 pm] ✅ OK Button clicked
 [1/5/2025, 2:30:24 pm] ✅ Appointment unavailable (text found)
 [1/5/2025, 2:30:24 pm] 🔒 Browser closed
+[1/5/2025, 2:45:04 pm] 🔄 Navigating to page...
+[1/5/2025, 2:45:20 pm] ✅ OK Button clicked
+[1/5/2025, 2:45:23 pm] ✅ Appointment unavailable (text found)
+[1/5/2025, 2:45:24 pm] 🔒 Browser closed
+[1/5/2025, 2:52:06 pm] 🔄 Navigating to page...
+[1/5/2025, 2:52:23 pm] ✅ OK Button clicked
+[1/5/2025, 2:52:28 pm] ✅ Appointment unavailable (text found)
+[1/5/2025, 2:52:28 pm] 🔒 Browser closed
+[1/5/2025, 2:53:01 pm] 🔄 Navigating to page...
+[1/5/2025, 2:53:18 pm] ✅ OK Button clicked
+[1/5/2025, 2:53:22 pm] FINAL URL:
+[1/5/2025, 2:53:22 pm] ✅ Appointment unavailable (text found)
+[1/5/2025, 2:53:22 pm] 🔒 Browser closed
+[1/5/2025, 2:53:44 pm] 🔄 Navigating to page...
+[1/5/2025, 2:54:01 pm] ✅ OK Button clicked
+[1/5/2025, 2:54:05 pm] FINAL URL:
+[1/5/2025, 2:54:05 pm] ✅ Appointment unavailable (text found)
+[1/5/2025, 2:54:05 pm] 🔒 Browser closed
+[1/5/2025, 2:55:51 pm] 🔄 Navigating to page...
+[1/5/2025, 2:56:08 pm] ✅ OK Button clicked
+[1/5/2025, 2:56:12 pm] FINAL URL: https://termine.staedteregion-aachen.de/auslaenderamt/suggest
+[1/5/2025, 2:56:12 pm] ✅ Appointment unavailable (text found)
+[1/5/2025, 2:56:12 pm] 🔒 Browser closed
+[1/5/2025, 3:24:49 pm] 🔄 Navigating to page...
+[1/5/2025, 3:25:07 pm] ✅ OK Button clicked
+[1/5/2025, 3:25:11 pm] FINAL URL: https://termine.staedteregion-aachen.de/auslaenderamt/suggest
+[1/5/2025, 3:25:11 pm] ❌ Appointment unavailable (text found)
+[1/5/2025, 3:25:11 pm] 🔒 Browser closed

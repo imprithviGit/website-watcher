@@ -17,7 +17,7 @@ async function checkPage() {
     headless: true,
     slowMo: 100,
     defaultViewport: null,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'] // required for Railway
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
   const page = await browser.newPage();
@@ -67,4 +67,4 @@ async function checkPage() {
   }
 }
 
-checkPage();
+module.exports = checkPage;

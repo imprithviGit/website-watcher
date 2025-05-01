@@ -68,3 +68,6 @@ Node.js v22.5.1
 ✅ Text found
 ⏳ Keeping browser open for 3 seconds...
 🔒 Closing browser...
+FINAL URL: url() {
+            return this.mainFrame().url();
+        }

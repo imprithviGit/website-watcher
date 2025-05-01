@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const checkPage = require('./checkPage'); // import your checkPage function
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -25,6 +26,12 @@ app.get('/', (req, res) => {
       </html>`;
     res.send(html);
   });
+});
+
+// ✅ Manual trigger endpoint
+app.get('/run-cron', async (req, res) => {
+  await checkPage();
+  res.send('✅ Cron ran successfully');
 });
 
 app.listen(PORT, () => {
