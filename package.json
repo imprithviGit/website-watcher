@@ -1,0 +1,19 @@
+{
+  "name": "website_watcher",
+  "version": "1.0.0",
+  "description": "Scrapes a website, sends alerts, and serves a log dashboard.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "node checkPage.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemailer": "^6.10.1",
+    "puppeteer": "^24.7.2"
+  }
+}

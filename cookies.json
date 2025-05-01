@@ -1,0 +1,17 @@
+[
+  {
+    "name": "tvo_session",
+    "value": "26mqllhdr5hv4j5om6so7844ie",
+    "domain": ".termine.staedteregion-aachen.de",
+    "path": "/auslaenderamt",
+    "expires": -1,
+    "size": 37,
+    "httpOnly": true,
+    "secure": true,
+    "session": true,
+    "sameSite": "None",
+    "priority": "Medium",
+    "sameParty": false,
+    "sourceScheme": "Secure"
+  }
+]
