@@ -2,14 +2,19 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 const sendAlertEmail = require('./emailer');
+const axios = require('axios');
 
 const EXPECTED_TEXT = 'Kein freier Termin verfügbar';
 const logFile = path.join(__dirname, 'cron-log.txt');
 const cookiesPath = path.join(__dirname, 'cookies.json');
 
-function logMessage(message) {
-  const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
-  fs.appendFileSync(logFile, `[${timestamp}] ${message}\n`);
+async function logMessage(message) {
+  console.log(message);
+  try {
+    await axios.post('https://YOUR-DASHBOARD-URL.onrender.com/log', { message });
+  } catch (err) {
+    console.log('❌ Failed to send log to dashboard:', err.message);
+  }
 }
 
 async function checkPage() {

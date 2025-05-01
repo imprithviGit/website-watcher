@@ -71,3 +71,29 @@ Node.js v22.5.1
 FINAL URL: url() {
             return this.mainFrame().url();
         }
+node:internal/modules/cjs/loader:1222
+  throw err;
+  ^
+
+Error: Cannot find module 'axios'
+Require stack:
+- /Users/imprithvi/Documents/Personal_Dev/website_watcher/checkPage.js
+- /Users/imprithvi/Documents/Personal_Dev/website_watcher/runCron.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1219:15)
+    at Module._load (node:internal/modules/cjs/loader:1045:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:215:24)
+    at Module.require (node:internal/modules/cjs/loader:1304:12)
+    at require (node:internal/modules/helpers:123:16)
+    at Object.<anonymous> (/Users/imprithvi/Documents/Personal_Dev/website_watcher/checkPage.js:5:15)
+    at Module._compile (node:internal/modules/cjs/loader:1504:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1588:10)
+    at Module.load (node:internal/modules/cjs/loader:1282:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/imprithvi/Documents/Personal_Dev/website_watcher/checkPage.js',
+    '/Users/imprithvi/Documents/Personal_Dev/website_watcher/runCron.js'
+  ]
+}
+
+Node.js v22.5.1
