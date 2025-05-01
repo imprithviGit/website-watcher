@@ -34,7 +34,7 @@ async function checkPage() {
   await page.setCookie(...cookies);
 
   try {
-    logMessage('🔄 Navigating to page...');
+    await logMessage('🔄 Navigating to page...');
     await page.goto('https://termine.staedteregion-aachen.de/auslaenderamt/select2?md=1', { waitUntil: 'networkidle2' });
     
     await page.waitForSelector('#header_concerns_accordion-455', { timeout: 10000 });
@@ -46,33 +46,33 @@ async function checkPage() {
     try {
       await page.waitForSelector('#OKButton', { timeout: 10000 });
       await page.click('#OKButton');
-      logMessage('✅ OK Button clicked');
+      await logMessage('✅ OK Button clicked');
     } catch {
-      logMessage('⚠️ Modal did not appear');
+      await logMessage('⚠️ Modal did not appear');
     }
 
     try {
       await page.waitForSelector('#WeiterButton', { timeout: 10000 });
       await page.click('#WeiterButton');
     } catch {
-      logMessage('⚠️ Final continue button not found');
+      await logMessage('⚠️ Final continue button not found');
     }
 
     const pageContent = await page.content();
     const currentUrl = page.url();
-    logMessage(`FINAL URL: ${currentUrl}`);
+    await logMessage(`FINAL URL: ${currentUrl}`);
     if (!pageContent.includes(EXPECTED_TEXT)) {
-      logMessage('✅ Text missing — sending email');
+      await logMessage('✅ Text missing — sending email');
       await sendAlertEmail('🚨 Appointment alert! Check now!');
     } else {
-      logMessage('❌ Appointment unavailable (text found)');
+      await logMessage('❌ Appointment unavailable (text found)');
     }
 
   } catch (error) {
-    logMessage(`💥 Error: ${error.message}`);
+    await logMessage(`💥 Error: ${error.message}`);
   } finally {
     await browser.close();
-    logMessage('🔒 Browser closed');
+    await logMessage('🔒 Browser closed');
   }
 }
 
