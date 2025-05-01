@@ -4,12 +4,11 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(bodyParser.json()); // so we can receive JSON POST data
+app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
 const logFile = path.join(__dirname, 'cron-log.txt');
 
-// Serve dashboard
 app.get('/', (req, res) => {
   fs.readFile(logFile, 'utf8', (err, data) => {
     if (err) return res.send('No logs yet.');
@@ -31,7 +30,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// ✅ NEW: Endpoint to receive logs from cron job
 app.post('/log', (req, res) => {
   const { message } = req.body;
   const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
