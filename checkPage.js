@@ -50,7 +50,7 @@ async function checkPage() {
     }
 
     const pageContent = await page.content();
-    console.log("FINAL URL:", `${page.url}`)
+    console.log("FINAL URL:", page.url());
     if (!pageContent.includes(EXPECTED_TEXT)) {
       logMessage('❌ Text missing — sending email');
       await sendAlertEmail('🚨 Appointment alert! Check now!');
