@@ -1,4 +1,4 @@
 node_modules
 .env
 debug-screenshot.png
-.txt
+cron-log.txt
