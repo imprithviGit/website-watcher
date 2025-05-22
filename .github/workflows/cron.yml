@@ -1,4 +1,4 @@
-name: Run CheckPage Every 15 Minutes
+name: Every 5 Minutes
 
 on:
   schedule:
