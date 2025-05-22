@@ -2,7 +2,7 @@ name: Every 5 Minutes
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # runs every 15 mins
+    - cron: '*/5 * * * *'  # runs every 5 mins
   workflow_dispatch:       # allows manual trigger too
 
 jobs:
