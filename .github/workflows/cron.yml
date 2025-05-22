@@ -2,7 +2,7 @@ name: Run CheckPage Every 15 Minutes
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # runs every 15 mins
+    - cron: '*/5 * * * *'  # runs every 15 mins
   workflow_dispatch:       # allows manual trigger too
 
 jobs:
